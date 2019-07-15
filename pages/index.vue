@@ -1,15 +1,18 @@
 <template>
   <section class="section">
     <div class="columns is-mobile" />
-    <hero></hero>
+    <hero />
+    <input-domain-form />
   </section>
 </template>
 
 <script>
 import Hero from '~/components/Hero.vue'
+import InputDomainForm from '~/components/InputDomainForm.vue'
 export default {
   components: {
-    Hero
+    Hero,
+    InputDomainForm
   }
 }
 </script>
