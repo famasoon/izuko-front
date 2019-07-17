@@ -5,13 +5,13 @@
     <div id="inputfield">
       <b-field position="is-centered">
         <b-input v-model="domain" placeholder="Input Domain or IP address..." type="search" icon="magnify" />
-        <nuxt-link :to="{ name: 'whois-domain', params: { domain: domain }}">
+        <a :href="'/whois/' + domain">
           <p class="control">
             <button class="button is-info">
               Lookup
             </button>
           </p>
-        </nuxt-link>
+        </a>
       </b-field>
     </div>
     <description />
