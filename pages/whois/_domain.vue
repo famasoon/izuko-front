@@ -9,7 +9,7 @@
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          Whois
+          Whois Result
         </p>
         <a href="#" class="card-header-icon" aria-label="more options">
           <span class="icon">
@@ -33,7 +33,7 @@ export default {
   async asyncData(context) {
     const DOMAIN_NAME = context.params.domain
     const { data } = await axios.get(
-      'http://izuko.ch/api/whois/' + DOMAIN_NAME
+      'http://127.0.0.1:8080/api/whois/' + DOMAIN_NAME
     )
     return { resp: data }
   }
