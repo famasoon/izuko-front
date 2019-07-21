@@ -19,7 +19,7 @@
       </header>
       <div class="card-content">
         <div class="content">
-          <pre>{{ resp.WhoisResult }}</pre>
+          <pre>{{ whoisResp.WhoisResult }}</pre>
         </div>
       </div>
     </div>
@@ -30,12 +30,18 @@
 import axios from 'axios'
 
 export default {
+  data: function() {
+    return {
+      whoisResp: ''
+    }
+  },
+
   async asyncData(context) {
     const DOMAIN_NAME = context.params.domain
     const { data } = await axios.get(
       'http://127.0.0.1:8080/api/whois/' + DOMAIN_NAME
     )
-    return { resp: data }
+    return { whoisResp: data }
   }
 }
 </script>
